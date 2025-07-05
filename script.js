@@ -1,11 +1,10 @@
-let tasks = []  // changed const to let so you can reassign
+let tasks = []  
 
 const containerTasks = document.querySelector(".tasks");
 const btnAddTask = document.getElementById("add");
 
 btnAddTask.addEventListener('click', addTask);
 
-// On page load, try to get tasks from localStorage, else fetch from JSON
 document.addEventListener("DOMContentLoaded", () => {
   getfromLocalStorage();
   if(tasks.length === 0) {
@@ -13,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Fetch from JSON file
+
 function loadfromjson() {
   fetch("tasks.json")
     .then(response => response.json())
     .then(values => {
-      tasks = values;  // assign array directly to tasks
+      tasks = values;  
       loadTasks();
     })
     .catch(error => console.log(error));
@@ -28,11 +27,11 @@ function loadTasks() {
   containerTasks.innerHTML = "";
   tasks.forEach((task, index) => {
     const div = document.createElement('div');
-    div.dataset.index = index;  // <-- add index here for removeTask
+    div.dataset.index = index;  
     
     const inputElement = document.createElement('input');
     inputElement.type = "checkbox";
-    inputElement.checked = task.completed; // show checked if completed
+    inputElement.checked = task.completed; 
 
     const spanTag = document.createElement('span');
     spanTag.textContent = task.task;
@@ -59,7 +58,7 @@ function loadTasks() {
     containerTasks.appendChild(div);
   });
 
-  saveToLocal();  // Save tasks after rendering
+  saveToLocal();  
 }
 
 function addTask() {
@@ -76,7 +75,7 @@ function addTask() {
     completed: false
   });
 
-  taskInput.value = ""; // clear input
+  taskInput.value = ""; 
   loadTasks();
 }
 
@@ -89,7 +88,7 @@ function complete(checkbox) {
     spanElement.style.textDecoration = "line-through";
     spanElement.style.opacity = 0.4;
     tasks[index].completed = true;
-    checkbox.disabled = true; // disable after completion (optional)
+    checkbox.disabled = true; 
   } else {
     spanElement.style.textDecoration = "none";
     spanElement.style.opacity = 1;
