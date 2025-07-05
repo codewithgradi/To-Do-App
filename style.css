@@ -1,0 +1,91 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #202020;
+}
+
+.container{
+    text-align: center;
+    margin: 5rem auto;
+    padding: 1rem;
+    width:50%;
+    border: 1px solid grey;
+    box-shadow: 1px 5px 10px;
+    background-color: #363535;
+}
+h1{
+    color: aqua;
+    text-shadow: 2px 2px 2px;
+}
+.search-add{
+    border-radius: 50px;
+    border: 1px solid grey;
+    height: fit-content;
+    width:75%;
+    margin: auto;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.search-add>input{
+    width: 90%;
+    padding: 8px;
+    color: whitesmoke;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+
+}
+.search-add>button{
+    width: 10%;
+    border-radius: 50px;
+    border: none;
+    background-color: aqua;
+    box-shadow: 1px 2px 2px;
+}
+.tasks{
+    padding-top: 1rem;
+    width: 75%;
+    margin: auto;
+    color: white;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    border: 1px solid grey;
+    background-color: #222222;
+    padding: 0.5rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+.task>span{
+    text-shadow: 2px 2px 2px black; 
+    font-size: 17px;      
+}
+.task>input{
+    border-radius: 50%;
+}
+#delete{
+    border:none;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: aqua;
+    opacity: 0.5;
+}
+#delete:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.task:hover{
+    transform:scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+    opacity: 1;
+}

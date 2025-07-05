@@ -1,0 +1,27 @@
+[
+    {
+        "task": "Study For NET511",
+        "date": "7/5/2025",
+        "completed": true   
+    },
+    {
+        "task": "AWS Cloud Practioner Exam",
+        "date": "6/5/2025",
+        "completed": false   
+    },
+    {
+        "task": "Intership Appliaction",
+        "date": "5/5/2025",
+        "completed": false  
+    },
+    {
+        "task": "Eden Schools Tournament",
+        "date": "12/6/2025",
+        "completed":true  
+    },
+    {
+        "task": "github Contributions",
+        "date": "7/25/2025",
+        "completed": false  
+    }
+]
